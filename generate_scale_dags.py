@@ -89,10 +89,10 @@ def main():
     for file_index in range(args.num_files):
         dag_ids = []
         for _ in range(args.dags_per_file):
-            dag_ids.append(f"test_{dag_index:05d}")
+            dag_ids.append(f"scale_test_{dag_index:05d}")
             dag_index += 1
 
-        filename = output_dir / f"test_{file_index:05d}.py"
+        filename = output_dir / f"scale_test_{file_index:05d}.py"
         generate_dag_file(filename, dag_ids, args.tasks_per_dag)
 
         if (file_index + 1) % 500 == 0 or file_index == args.num_files - 1:
