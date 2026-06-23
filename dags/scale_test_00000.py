@@ -11,5 +11,6 @@ with DAG(
 ) as dag:
     start = EmptyOperator(task_id="start")
     end = EmptyOperator(task_id="end")
+    final = EmptyOperator(task_id="final")
     workers = [EmptyOperator(task_id=f"task_{i}") for i in range(98)]
-    start >> workers >> end
+    start >> workers >> end >> final

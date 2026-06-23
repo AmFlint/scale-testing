@@ -3,8 +3,8 @@ from airflow.operators.empty import EmptyOperator
 from datetime import datetime
 
 with DAG(
-    dag_id="scale_test_00001",
-    start_date=datetime(2025, 1, 1),
+    dag_id="antoine",
+    start_date=datetime(2024, 1, 1),
     schedule=None,
     catchup=False,
     tags=["scale-test"],
